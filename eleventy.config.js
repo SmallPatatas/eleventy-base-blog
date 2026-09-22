@@ -60,7 +60,8 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
-/*	eleventyConfig.addPlugin(feedPlugin, {
+/*	RSS
+	eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom", // or "rss", "json"
 		outputPath: "/feed/feed.xml",
 		stylesheet: "pretty-atom-feed.xsl",
@@ -166,3 +167,4 @@ export const config = {
 
 	// pathPrefix: "/",
 };
+
