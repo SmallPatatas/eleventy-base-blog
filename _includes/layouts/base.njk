@@ -36,14 +36,19 @@
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
+		<!--
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
+		-->
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+			<div class="header">
+			<!--<a href="/" class="home-link">{{ metadata.title }}</a>-->
+			<a href="/" class="home-link"><img class="home-link-image" src="img/CCIA-wordmark.png" alt="Canadian Civic Infrastructure Alliance">
+			</a>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
@@ -54,17 +59,19 @@
 				{%- endfor %}
 				</ul>
 			</nav>
+			</div>
 		</header>
 
 		<main id="main">
-			<heading-anchors>
+			<!-- <heading-anchors> -->
+				<div class="main">
 				{{ content | safe }}
-			</heading-anchors>
+				</div>
+			<!-- </heading-anchors> -->
 		</main>
 
-		<footer>
-			<p>
-				<em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em>
+		<footer class="footer">
+			<p>© 2026 Canadian Civic Infrastructure Alliance
 			</p>
 		</footer>
 

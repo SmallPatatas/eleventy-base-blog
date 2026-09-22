@@ -1,11 +1,11 @@
 export default {
-	title: "Eleventy Base Blog v9",
-	url: "https://example.com/",
+	title: "CCIA-AICC",
+	url: "https://ccia-aicc.org/",
 	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	description: "Canadian Civic Infrastructure Alliance",
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
+		name: "Canadian Civic Infrastructure Alliance",
+		email: "contact@ccia-aicc.org",
+		url: "https://ccia-aicc.org/"
 	}
 }

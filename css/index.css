@@ -1,7 +1,22 @@
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/Merriweather-RXwe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-RyPo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Defaults */
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family: 'Source Sans Pro', -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+    --font-family-headers: 'Merriweather', serif, system-ui;
 }
 
 /* Theme colors */
@@ -11,6 +26,11 @@
 	--color-gray-90: #333;
 
 	--background-color: #fff;
+	--header-background-color: #fff;
+	--footer-background-color: #fff;
+	--heading-background-color: #fff;
+	--heading-text-color: #242659;
+	--footer-text-color: #242659;
 
 	--text-color: var(--color-gray-90);
 	--text-color-link: #082840;
@@ -32,6 +52,10 @@
 		--text-color-link-visited: #a6a6f8;
 
 		--background-color: #15202b;
+		--header-background-color: #fff;
+		--footer-background-color: #fff;
+		--heading-background-color: #15202b;
+		--heading-text-color: #fff;
 	}
 }
 
@@ -57,7 +81,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	max-width: 100%;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -92,6 +116,26 @@ iframe {
 	aspect-ratio: 16/9;
 }
 
+h1, h2, h3 {
+	font-family: var(--font-family-headers);
+	color: var(--heading-text-color);
+	line-height: 1.5;
+}
+
+p {
+	font-family: var(--font-family);
+}
+
+h1 {
+	background-color: var(--heading-background-color);
+}
+
+hr {
+	color: var(--color-gray-20);
+	height: 1px;
+	border-width: 0.5px;
+}
+
 p:last-child {
 	margin-bottom: 0;
 }
@@ -123,7 +167,16 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1px solid var(--color-gray-20);
+	background-color: var(--header-background-color);
+}
+
+footer {
+	border-top: 1px solid var(--color-gray-20);
+	background-color: var(--footer-background-color);
+	text-align: center;
+	padding-bottom: 30px;
+	color: var(--footer-text-color);
 }
 
 #skip-link {
@@ -207,6 +260,10 @@ header {
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
+}
+.home-link-image {
+	width: 400px;
+	height: auto;
 }
 
 /* Nav */
@@ -296,3 +353,14 @@ header {
 	margin-right: 1em;
 }
 
+.main {
+	max-width: 65em;
+	margin: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.bio-image {
+	width: 300px;
+	height: 300px;
+}

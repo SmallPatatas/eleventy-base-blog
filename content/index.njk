@@ -1,15 +1,68 @@
-///---js
+---js
 ///const eleventyNavigation = {
 ///	key: "Home",
 ///	order: 1
 ///};
-
 const numberOfLatestPostsToShow = 3;
 ---
+
+<h3 style="padding-top:10px;padding-bottom:10px;">The Canadian Civic Infrastructure Alliance (CCIA) is a Canadian not-for-profit organization working with residents, municipal officials, researchers, and policy experts to strengthen public capacity around major digital and energy infrastructure decisions.</h3>
+<hr>
+
+
+<!--
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+-->
+<h1>Latest News</h1>
 
+<h2>CCIA submission to Ontario's Data Centre Playbook consultation</h2>
+
+<p>The CCIA's work on data-centre development involves communities and municipal actors across
+Ontario and the country. While specific local circumstances can differ, the underlying governance
+issue is the same. Municipalities are being asked to assess large infrastructure projects of a novel
+nature even while existing standards and frameworks remain non-enforceable, incomplete, and
+outdated. Project information is often fragmented or opaque, making local costs and benefits difficult
+to assess and verify.</p>
+
+<p>We welcome Ontario's decision to develop a provincial Data Centre Playbook. For the framework to
+succeed, it must treat municipalities as governments with independent authority over host-community
+impacts, not as mere stakeholders to be consulted only after major investment and grid decisions
+have already been made.</p>
+
+<p>Read our full submission <a href="../files/Ontario_Data-Centre-Playbook-Submission_CCIA-AICC.pdf" target="_blank">here</a>.</p>
+<br>
+<hr>
+
+<h1>About us</h1>
+
+<img class="bio-image" src="../img/bio/bea-bhardwaj.jpg">
+<h2>Bhavyatta (Bea) Bhardwaj | Director & Cofounder</h2>
+<h3>Research, Consulting</h3>
+<p>Bhavyatta Bhardwaj is a systems governance researcher and consultant who has led cybersecurity and digital transformation programs in both the public and private sector.</p>
+
+<img class="bio-image" src="../img/bio/nick-tsergas.jpg" alt="Nick Tsergas">
+<h2>Nick Tsergas | Cofounder</h2>
+<h3>Research, Policy Development</h3>
+<p>Nick Tsergas is a health and tech journalist and founder of <a href="https://stopthedatacentre.ca">Stop the Datacentre</a>, a Canadian network supporting communities seeking enforceable rules for AI data-centre development. His work is currently done in partnership with the Small Change Fund.</p>
+
+<img class="bio-image" src="../img/bio/dan-shannon.jpg">
+<h2>Dan Shannon | Cofounder</h2>
+<h3>Research, Policy Development</h3>
+<p>Dan Shannon is a researcher and independent investigative journalist who writes about technology and society.</p>
+
+<br>
+<hr>
+<h1>Contact</h1>
+<p>We welcome your comments, questions, and feedback.</p>
+<p>To get in touch, please send an email to:</p>
+<p><a href="mailto:contact@ccia-aicc.org">contact@ccia-aicc.org</a></p>
+
+<br>
+
+
+<!--
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
 {% include "postslist.njk" %}
@@ -27,3 +80,4 @@ const numberOfLatestPostsToShow = 3;
 	{%- endfor %}
 </ul>
 #}
+-->
